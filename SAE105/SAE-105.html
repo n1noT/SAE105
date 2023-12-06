@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- nav -->
+    <nav id="nav_template" class="nav">
+        <ul class="nav__menu">
+            {{nav-liste-menu}}
+        </ul>
+
+        <h1 class="nav__logo">
+            {{nav-nom}}
+        </h1>
+
+        <ul class="nav__pers">
+            {{nav-liste-pers}} {{nav-liste-btn}}
+        </ul>
+    </nav>
+
+    <template id="nav_pers_template">
+        <li>
+            <a class="nav__pers-name" href="{{nav-url}}">
+                {{nav-rubrique}}
+            </a>
+
+        </li>
+
+    </template>
+
+    <template id="nav_btn_template">
+        <li>
+            <button class="nav__pers-name-sign" href="{{nav-url}}">
+                {{nav-button}}
+            </button>
+        </li>
+    </template>
+
+
+
+    <!-- header -->
+
+    <header id="header__template" class="header">
+
+        <h2 class="header__title">
+            {{header-title}}
+        </h2>
+
+        <p class="header__p">{{header-para}}
+        </p>
+
+    </header>
+
+
+
+    <!-- content -->
+
+    <div id="content__template" class="content">
+        <p class="content__p">{{content-para}}</p>
+
+        <h3 class="content__title">{{content-title}}</h3>
+    </div>
+
+
+
+    <!-- features-->
+
+    <div class="features">
+        <div class="features__text">
+            <h4 class="features__title">{{features-title}}</h4>
+
+            <p class="features__p">{{features-para}}.</p>
+        </div>
+        <div class="features__button">
+            <button class="nav__pers-name-sign">{{features-download}}</button>
+            <button class="features__btn">{{features-more}}</button>
+        </div>
+        <img class="features__img" src="{{features-url}}">
+    </div>
+
+
+
+    <!-- call to action -->
+
+    <div class="cta">
+        <h3 class="cta__title">{{cta-title}}
+        </h3>
+    </div>
+
+
+
+    <!-- forms -->
+
+    <div class="forms">
+        <p class="forms__p">{{forms-para}}</p>
+
+        <h3 class="forms__title">{{forms-title}}
+        </h3>
+
+        <div class="forms__button">
+            <input class="forms__btn-email" type="text" placeholder="{{forms-input}}"></input>
+            <button class="forms__btn-sign">{{forms-button}}</button>
+        </div>
+    </div>
+
+
+
+    <!-- testimonials -->
+
+    <ul class="testi">
+        {{testi-liste}}
+
+    </ul>
+
+    <template id="testi_template">
+        <li class="testi__pers">
+            <img class="testi__photo" src="{{testi-url}}">
+            <div class="testi__desc">
+                <p class="testi__desc-p">{{testi-com}}</p>
+                <h4 class="testi__desc-name">{{testi-name}}</h4>
+            </div>
+        </li>
+    </template>
+
+
+    <!-- showcase -->
+
+    <div class="work">
+        <div class="features__text">
+            <h4 class="features__title">{{show-title}}
+            </h4>
+            <p class="features__p">{{show-para}}</p>
+        </div>
+        <ul class="work__cards">
+            {{show-liste}}
+
+        </ul>
+
+    </div>
+
+    <template id="show_card_template">
+        <li class="work__cards-single">
+            <img class="work__cards-single-img" src="{{show-url}}">
+            <div class="work__cards-single-text">
+                <h4 class="work__cards-single-title">{{show-card-title}}</h4>
+                <p class="work__cards-single-desc">{{show-card-para}}</p>
+                <h4 class="work__cards-single-tag">{{show-liste-tags}}</h4>
+            </div>
+        </li>
+    </template>
+    
+
+    <!-- team -->
+
+    <div class="team">
+        <div class="team__photos">
+            <ul class="team__photos-1">
+                {{liste-photo}}
+
+            </ul>
+            <div class="team__photos-2">
+                <img class="team__photos-2-img" src="{{url-img2}}">
+                <img class="team__photos-2-svg" src="./assets/Dotted_Shape.svg">
+            </div>
+        </div>
+        <div class="team__text">
+            <h3 class="team__text-subtitle">{{sub}}</h3>
+            <h2 class="team__text-title">{{title}}
+            </h2>
+
+            <ul class="team__text-desc">
+                {{liste-p}}
+            </ul>
+
+            <button class="team__text-btn">{{button}}</button>
+        </div>
+    </div>
+
+    <template id="img1_template">
+        <li>
+            <img class="team__photos-1-img" src="{{url-img1}}">
+        </li>
+    </template>
+
+    <template id="desc_template">
+        <li>
+            <p>{{para}}</p>
+        </li>
+    </template>
+
+    <!-- contact -->
+
+    <section class="contact">
+        <div class="contact__text">
+            <h4 class="contact__text-title">{{contact-title}}</h4>
+            <p class="contact__text-desc">{{contact-para}}</p>
+        </div>
+        <div class="contact__forms">
+            <div class="contact__forms-l">
+                {{liste-q}}
+            </div>
+            <input class="contact__btn-mess" type="text" placeholder="{{contact-q3}}"></input>
+        </div>
+        <button class="forms__btn-sign">{{contact-btn}}</button>
+
+    </section>
+
+    <template id="contact_q_template">
+        <li>
+            <input class="contact__btn-email" type="text" placeholder="{{contact-q}}"></input>
+        </li>
+    </template>
+
+    <!-- prices -->
+
+    <div class="prices">
+        <div class="prices__text">
+            <h3 class="prices__text-title">{{prices-title}}</h3>
+            <p class="prices__text-desc">{{prices-para}}</p>
+        </div>
+        <ul class="prices__cards">
+            {{liste-prices}}
+        </ul>
+    </div>
+
+    <template id="price_template">
+        <li class="prices__card1">
+            <div class="prices__card1-pack">
+                <h3 class="prices__card1-title">{{prices-card-title}}</h3>
+                <div class="price__card1-dolys">
+                    <h1 class="prices__card1-price">{{prices-card-price}}</h1>
+                    <h5 class="prices__card1-dol">{{prices-card-money}}</h5>
+                </div>
+            </div>
+            <div class="prices__card1-opt-l">
+                <ul class="prices__card1-opt-check">
+                    {{liste-check}}
+                </ul>
+                <ul class="prices__card1-opt">
+                    {{liste-opt}}
+                </ul>
+            </div>
+            <button class="prices__card1-btn">{{prices-button}}</button>
+        </li>
+    </template>
+
+    <template id="enable_template">
+        <li class="prices__card1-opt-name">
+            {{enable}}
+        </li>
+    </template>
+
+    <template id="disable_template">
+        <li class="prices__card1-opt-grey">
+            {{disable}}
+        </li>
+    </template>
+
+    <template id="check_template">
+        <li>
+            <img src="{{prices-card-svg}}">
+        </li>
+    </template>
+
+    <!-- footer -->
+
+    <footer id="footer_template" class="footer">
+        <ul class="footer__menu">
+            {{footer-liste}}
+        </ul>
+
+        <p>© 2016 Designmodo. All rights reserved.</p>
+    </footer>
+
+    <template id="section_template">
+        <li>
+            <a class="footer__menu-name" href="{{footer-url}}">{{footer-nom}}</a>
+        </li>
+    </template>
+
+    <script src='script.js'></script>
+
+</body>
+
+</html>
